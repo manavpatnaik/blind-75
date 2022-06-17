@@ -21,3 +21,13 @@ TreeNode* invertTree(TreeNode* root) {
     
     return root;
 }
+
+// Another approach
+TreeNode* invertTree1(TreeNode* root) {
+    if (root) {
+        swap(root->left, root->right);
+        root->left = invertTree(root->left);
+        root->right = invertTree(root->right);
+    }
+    return root;
+}
