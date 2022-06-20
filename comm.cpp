@@ -2,6 +2,8 @@
 using namespace std;
 
 int main() {
-    cout << '1'-'0' << endl;
+    string str = "abcdef";
+    cout << str << endl;
+    cout << str.substr(2) << endl;
     return 0;
 }
